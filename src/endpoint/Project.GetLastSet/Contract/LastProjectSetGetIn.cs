@@ -9,7 +9,7 @@ public readonly record struct LastProjectSetGetIn
 {
     public LastProjectSetGetIn(
         [ClaimIn] Guid systemUserId,
-        [JsonBodyIn, SwaggerDescription(In.TopDescription), IntegerExample(In.TopExample)] int? top)
+        [QueryIn, SwaggerDescription(In.TopDescription), IntegerExample(In.TopExample)] int? top)
     {
         SystemUserId = systemUserId;
         Top = top;
