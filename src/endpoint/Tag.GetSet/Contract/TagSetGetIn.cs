@@ -9,7 +9,7 @@ public sealed record class TagSetGetIn
 {
     public TagSetGetIn(
         [ClaimIn] Guid systemUserId,
-        [JsonBodyIn, SwaggerDescription(In.ProjectIdDescription), StringExample(In.ProjectIdExample)] Guid projectId)
+        [RouteIn, SwaggerDescription(In.ProjectIdDescription), StringExample(In.ProjectIdExample)] Guid projectId)
     {
         SystemUserId = systemUserId;
         ProjectId = projectId;
