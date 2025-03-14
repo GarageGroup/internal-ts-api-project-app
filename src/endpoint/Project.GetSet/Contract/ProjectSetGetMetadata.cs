@@ -6,7 +6,7 @@ internal static class ProjectSetGetMetadata
     {
         public const string Tag = "Project";
 
-        public const string Route = "/projects";
+        public const string Route = "/";
 
         public const string Summary
             =

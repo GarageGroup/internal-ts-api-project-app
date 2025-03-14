@@ -9,8 +9,14 @@ namespace GarageGroup.Internal.Timesheet.Endpoint.Tag.GetSet.Test;
 
 partial class TagSetGetFuncTest
 {
-    [Fact]
-    public static async Task InvokeAsync_ExpectSqlApiCalledOnce()
+    [Theory]
+    [InlineData(ProjectType.Project)]
+    [InlineData(ProjectType.Lead)]
+    [InlineData(ProjectType.Opportunity)]
+    [InlineData(ProjectType.Incident)]
+    [InlineData((ProjectType)15)]
+    public static async Task InvokeAsync_ExpectSqlApiCalledOnce(
+        ProjectType projectType)
     {
         var mockSqlApi = BuildMockSqlApi(SomeDbTimesheetTagSet);
 
@@ -22,6 +28,7 @@ partial class TagSetGetFuncTest
 
         var input = new TagSetGetIn(
             systemUserId: new("82ee3d26-17f1-4e2f-adb2-eeea5119a512"),
+            projectType: projectType,
             projectId: new("58482d23-ca3e-4499-8294-cc9b588cce73"));
 
         var cancellationToken = new CancellationToken(false);

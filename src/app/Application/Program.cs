@@ -12,8 +12,8 @@ static class Program
         .UseSwagger()
         .UseStandardSwaggerUI()
         .UseJwtReader()
-        .UseProjectSetGetEndpoint()
         .UseLastProjectSetGetEndpoint()
         .UseTagSetGetEndpoint()
+        .UseProjectSetGetEndpoint()
         .RunAsync();
 }

@@ -33,6 +33,7 @@ public static partial class TagSetGetFuncTest
         =
         new(
             systemUserId: new("54f0d2cf-93a3-417e-a21a-bff4e16c1b25"),
+            projectType: ProjectType.Project,
             projectId: new("6f8f07d6-b7e4-4b00-a829-e680c0375d1e"));
 
     private static Mock<ISqlQueryEntitySetSupplier> BuildMockSqlApi(
