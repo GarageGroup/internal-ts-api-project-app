@@ -6,7 +6,7 @@ internal static class TagSetGetMetadata
     {
         public const string Tag = "Tag";
 
-        public const string Route = "/project/{projectId}/tags";
+        public const string Route = "/{projectType}/{projectId}/tags";
 
         public const string Summary
             =
@@ -24,6 +24,12 @@ internal static class TagSetGetMetadata
             "Unique identifier of the project in Dataverse.";
 
         public const string ProjectIdExample = "9dfb0e67-e565-4787-bab6-d92a2cf6bb70";
+
+        public const string ProjectTypeDescription
+            =
+            "Type of the project";
+
+        public const string ProjectTypeExample = nameof(ProjectType.Project);
     }
 
     public static class Out
